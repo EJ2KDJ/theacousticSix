@@ -78,5 +78,3 @@ git merge main
 - **Never** edit the `main` branch directly.
 - Use clear commit messages so we know what you changed.
 - If you're stuck, just ask! We're in this together. 😃
-
-Happy coding! 🚀
