@@ -7,6 +7,8 @@ Welcome to the project. Here’s how you can set up your own copy of the website
 ## Before You Start
 First, make sure you have **Git** and **Bash** installed on your computer. If you don’t have Bash yet, [download it here](https://gitforwindows.org/) (Windows users) or use your terminal if you're on Mac/Linux.
 
+Also, **before running any commands, open Git Bash** and make sure you're inside the folder where you keep your web projects (e.g., `Desktop` or another dedicated folder).
+
 ## Getting Started
 
 ### 1. Clone the Repository 🛠️
@@ -17,18 +19,22 @@ You need to get a local copy of the project on your computer.
 git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
 ```
 
-### 2. Create Your Own Branch 🌱
+### 2. Move Into the Project Folder 🚀
+After cloning, navigate into the project folder:
+
+```bash
+cd REPO-NAME
+```
+
+### 3. Create Your Own Branch 🌱
 Always create a new branch before making changes. This keeps the `main` branch clean.
 
 ```bash
-# Move into the project folder
-cd REPO-NAME
-
 # Create and switch to a new branch (pick a name that makes sense)
 git checkout -b your-branch-name
 ```
 
-### 3. Make Changes & Save Them 💾
+### 4. Make Changes & Save Them 💾
 Once you make edits, save them like this:
 
 ```bash
@@ -42,7 +48,7 @@ git add .
 git commit -m "Added new feature/fixed a bug"
 ```
 
-### 4. Upload Your Work 📤
+### 5. Upload Your Work 📤
 Push your branch to GitHub so I can see it.
 
 ```bash
@@ -50,7 +56,7 @@ Push your branch to GitHub so I can see it.
 git push origin your-branch-name
 ```
 
-### 5. Create a Pull Request 🔄
+### 6. Create a Pull Request 🔄
 Now, go to GitHub:
 1. Open the repository in your browser.
 2. Click on **Pull Requests**.
@@ -59,7 +65,7 @@ Now, go to GitHub:
 5. Click **Create Pull Request** and write a short description of what you changed.
 6. Wait for me to check it and approve before it gets added to `main`.
 
-### 6. Keep Your Branch Updated 🔄
+### 7. Keep Your Branch Updated 🔄
 If the `main` branch gets updated while you're working, update your branch too:
 
 ```bash
@@ -77,6 +83,8 @@ git merge main
 ```
 
 ## Some Friendly Reminders ✨
+- **Always open Git Bash** before running any commands.
+- **Make sure you're inside the correct project folder** before doing anything.
 - **Never** edit the `main` branch directly.
 - Use clear commit messages so we know what you changed.
 - If you're stuck, just ask! We're in this together. 😃
