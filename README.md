@@ -1,6 +1,8 @@
 # Simple Website Project - How to Contribute 💻
 
-FOR MARK BALBIN a.k.a TOJI AND NICOS BOBIS a.k.a DADDY! Welcome to the project. Here’s how you can set up your own copy of the website and contribute without messing up the main branch. Follow these steps, and you’ll be good to go! 🚀
+## (FOR MARK BALBIN a.k.a TOJI AND NICOS BOBIS a.k.a DADDY) 
+
+Welcome to the project. Here’s how you can set up your own copy of the website and contribute without messing up the main branch. Follow these steps, and you’ll be good to go! 🚀
 
 ## Before You Start
 First, make sure you have **Git** and **Bash** installed on your computer. If you don’t have Bash yet, [download it here](https://gitforwindows.org/) (Windows users) or use your terminal if you're on Mac/Linux.
