@@ -23,7 +23,7 @@ git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
 After cloning, navigate into the project folder:
 
 ```bash
-cd REPO-NAME
+cd REPOSITORY-NAME
 ```
 
 ### 3. Create Your Own Branch 🌱
