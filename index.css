@@ -8,6 +8,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+header {
+
+}
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -15,6 +19,7 @@ body {
     background: white;
     padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: nowrap;
 }
 
 .logo {
