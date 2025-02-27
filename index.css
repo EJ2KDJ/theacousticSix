@@ -8,10 +8,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
-
-}
-
 .navBar {
     display: flex;
     justify-content: space-between;
