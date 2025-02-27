@@ -37,7 +37,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: black;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .readbtn {
@@ -47,6 +47,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 17px;
 }
 
 .btn:hover {
