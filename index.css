@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.navbar {
+.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
