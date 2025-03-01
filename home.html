@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABNKKBSNPLAko?! - Website</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,16 +16,38 @@
             <div class="logo">Acoustic 6</div>
             <ul class="nav-links">
                 <li><a href="home.html">Home page</a></li>
-                <li><a href="#about.html">About Us</a></li>
-                <li><a href="#explore.html">Explore More</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="explore.html">Explore More</a></li>
             </ul>
             <button class="readbtn">Read Now</button>
         </nav>
     </header>
     
-    <section id="">
-        <h2>Welcome to the ABNKKBSNPLAko?! Website</h2>
-        <p>A glimpse into Bob Ong’s nostalgic journey through Filipino school life.</p>
+    <section id="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('image1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('image2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('image3.jpg');"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 id="hero-title">Relive the Journey of Filipino School Life!</h1>
+            <p id="hero-text">
+            Welcome to the interactive hub for <strong>ABNKKBSNPLAko?!</strong> Dive deep into the themes, 
+            characters, and humor that make this book a beloved classic among Filipino readers.
+            </p>
+            <div class="hero-btn">
+                <button class="btn-1">Explore</button>
+                <button class="btn-2">Read</button>
+            </div>
+        </div>
+
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+        </div>
+
     </section>
     <footer>
         <p>&copy; 2025 ABNKKBSNPLAko?! Fan Site</p>
