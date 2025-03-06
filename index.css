@@ -368,9 +368,8 @@ body {
 
 .explore-footer {
     text-align: center;
-    padding: 15px;
+    padding: 40px;
     font-size: 14px;
     background: linear-gradient(to top, #00000020, white);
     font-family: Arial, sans-serif;
 }
-
