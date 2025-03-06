@@ -245,7 +245,7 @@ body {
 
 /* Story Quiz Section */
 #story-quiz {
-    text-align: center;
+    text-align: left;
     padding: 40px;
     margin-top: 20px;
 }
@@ -262,7 +262,7 @@ body {
 
 .quiz-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
 }
 
@@ -289,3 +289,88 @@ body {
 .quiz-buttons button:hover {
     opacity: 0.8;
 }
+
+/* EXPLORE PAGE */
+
+#explore-start {
+    font-family: "Poppins", sans-serif;
+    padding: 50px;
+    margin: 0 auto;   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#explore-start h1 {
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 36px;
+}
+
+#explore-start h3 {
+    font-weight: lighter;
+}
+
+#explore-start p {
+    font-size: 12px;
+}
+
+#explore {
+    font-family: "Patrick Hand", cursive;
+}
+
+#e-1 h1 {
+    text-align: left;
+}
+
+.e-c-l-b {
+    padding: 15px;
+    text-align: left;
+}
+.e-content-l {
+    width: 100%;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+.e-content-l img{
+    width: 40%;
+}
+
+.e-content-l p {
+    width: 50%;
+
+}
+
+.e-c-r-b {
+    padding: 15px;
+    text-align: right;
+}
+.e-content-r {
+    width: 100%;
+    justify-content: center;
+    align-items: right;
+    text-align: right;
+}
+
+.e-content-r img{
+    width: 40%;
+}
+
+.e-content-r p {
+    width: 50%;
+
+}
+
+
+.explore-footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    background: linear-gradient(to top, #00000020, white);
+    font-family: Arial, sans-serif;
+}
+
