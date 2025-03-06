@@ -27,9 +27,9 @@
 
     <section id="hero">
         <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('image1.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('image2.jpg');"></div>
-            <div class="hero-slide" style="background-image: url('image3.jpg');"></div>
+            <div class="hero-slide active" style="background-image: url('../assets/home/hom1.png');"></div>
+            <div class="hero-slide" style="background-image: url('../assets/home/hom2.png');"></div>
+            <div class="hero-slide" style="background-image: url('../assets/home/hom3.png');"></div>
         </div>
 
         <div class="hero-content">
@@ -110,6 +110,25 @@
     <footer class="page-footers">
         <p>© 2025 ABNKKBSNPLAko?! All rights reserved.</p>
     </footer> 
+
+    <script>
+        const images = [
+            "./assets/home/hom1.png",
+            "./assets/home/hom2.png",
+            "./assets/home/hom3.png"
+        ];
+    
+        let currentIndex = 0;
+        const heroSection = document.querySelector("#hero");
+    
+        function changeBackground() {
+            currentIndex = (currentIndex + 1) % images.length;
+            heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+        }
+    
+        setInterval(changeBackground, 5000);
+    </script>
+    
 </body>
 
 </html>
