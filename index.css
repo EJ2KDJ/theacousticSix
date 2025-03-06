@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* NAVIGATION BAR */
@@ -63,6 +63,13 @@ body {
 
 
 /* HOME - HERO */
+
+#home-hero {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 #hero {
     position: relative;
     width: 100%;
@@ -149,7 +156,6 @@ body {
 }
 
 #book-magic {
-    padding: 50px;
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -217,12 +223,27 @@ body {
     gap: 30px;
 }
 
-.bob-ong-image {
-    flex: 1;
+.bon-ong-image {
     display: flex;
-    gap: 15px;
+    gap: 10px; 
     justify-content: center;
 }
+
+.bon-ong-image img {
+    width: 45%; 
+    height: auto;
+}
+
+.bon-ong-image img:first-child {
+    position: relative;
+    top: -15px;
+}
+
+.bon-ong-image img:last-child {
+    position: relative;
+    top: 15px; 
+}
+
 
 .bob-ong-image img {
     max-width: 250px;
@@ -371,5 +392,12 @@ body {
     padding: 40px;
     font-size: 14px;
     background: linear-gradient(to top, #00000020, white);
+    font-family: Arial, sans-serif;
+}
+
+.page-footers {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
     font-family: Arial, sans-serif;
 }
