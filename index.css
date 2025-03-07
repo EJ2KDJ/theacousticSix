@@ -7,8 +7,17 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    margin-top: 97px;
+}
+
 /* NAVIGATION BAR */
 .navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,6 +25,7 @@ html, body {
     padding: 15px 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex-wrap: nowrap;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -372,17 +382,73 @@ html, body {
 }
 
 
+.about {
+    margin: 0 auto;
+    padding: 30px 20% 0 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 3rem;
+}
+
+.box {
+    justify-content: center;
+    align-items: center;
+    margin: 0 5% 0 5%;
+}
+
+.rows {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.person {
+    flex: 1;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+}
+.person h2 {
+    font-family: 'Permanent Marker Regular', sans-serif;
+    font-size: 32px;
+}
+.person h2, 
+.person p {
+    margin: 0;
+}
+
+.person p {
+    font-size: 20px;
+}
+
+
+.p-img {
+    width: 345px;
+    height: 350px;
+    border: solid 0.3rem black;
+    background-color: darkgreen;
+}
+
+
+.explore-footer {
+    background: linear-gradient(to top, #00000020, white);
+}
+
+.page-footers,
 .explore-footer {
     text-align: center;
     padding: 40px;
-    font-size: 14px;
-    background: linear-gradient(to top, #00000020, white);
-    font-family: Arial, sans-serif;
-}
-
-.page-footers {
-    text-align: center;
-    padding: 40px;
-    font-size: 14px;
+    font-size: 22px;
     font-family: Arial, sans-serif;
 }
