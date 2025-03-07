@@ -23,7 +23,7 @@ body {
     align-items: center;
     background: white;
     padding: 15px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     flex-wrap: nowrap;
     box-sizing: border-box;
 }
@@ -31,7 +31,7 @@ body {
 .logo {
     font-family: "Dancing Script", "cursive";
     font-size: 32px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .nav-links {
@@ -381,6 +381,7 @@ body {
 
 }
 
+/* ABOUT */
 
 .about {
     margin: 0 auto;
@@ -406,7 +407,7 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
@@ -440,7 +441,76 @@ body {
     background-color: darkgreen;
 }
 
+/* QUIZ */
 
+.quiz {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.qbox {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+    align-items: start;
+}
+
+.qrow {
+    display: contents;
+}
+
+.qcharacter {
+    padding: 15px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3rem;
+}
+
+.qcharacter h3 {
+    color: gray;
+}
+
+.qcharacter .qimg {
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.quiz h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+
+.quiz h1 {
+    font-size: 42px;
+}
+
+.quiz p {
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.quiz-btn {
+    text-decoration: none;
+    border: solid 2px black;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+
+
+/* footers */
 .explore-footer {
     background: linear-gradient(to top, #00000020, white);
 }
