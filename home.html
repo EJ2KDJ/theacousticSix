@@ -120,11 +120,10 @@
 
     <script>
         const images = [
-            "https://your-netlify-site.netlify.app/assets/home/hom1.webp?w=1920&fm=webp",
-            "https://your-netlify-site.netlify.app/assets/home/hom2.webp?w=1920&fm=webp",
-            "https://your-netlify-site.netlify.app/assets/home/hom3.webp?w=1920&fm=webp"
+            "assets/home/hom1.webp",
+            "assets/home/hom2.webp",
+            "assets/home/hom3.webp"
         ];
-
 
         let currentIndex = 0;
         const heroSection = document.querySelector("#hero");
@@ -140,6 +139,7 @@
             heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
         }
 
+        setTimeout(changeBackground, 100);
         setInterval(changeBackground, 5000);
     </script>
 
