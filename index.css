@@ -45,6 +45,7 @@ html, body {
     cursor: pointer;
     border-radius: 5px;
     font-size: 17px;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -138,6 +139,7 @@ html, body {
     background: white;
     color: black;
     border: 1px solid black;
+    text-decoration: none;
 }
 
 .btn-2 {
@@ -276,6 +278,7 @@ html, body {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .btn-r {
