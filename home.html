@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./assets/home/hom1.webp" as="image">
+    <link rel="preload" href="./assets/home/hom2.webp" as="image">
+    <link rel="preload" href="./assets/home/hom3.webp" as="image">
+
 </head>
 
 <body>
@@ -27,9 +31,9 @@
 
     <section id="hero">
         <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('../assets/home/hom1.png');"></div>
-            <div class="hero-slide" style="background-image: url('../assets/home/hom2.png');"></div>
-            <div class="hero-slide" style="background-image: url('../assets/home/hom3.png');"></div>
+            <div class="hero-slide active" style="background-image: url('assets/home/hom1.webp');"></div>
+            <div class="hero-slide" style="background-image: url('assets/home/hom2.webp');"></div>
+            <div class="hero-slide" style="background-image: url('assets/home/hom3.webp');"></div>
         </div>
 
         <div class="hero-content">
@@ -52,12 +56,14 @@
 
     </section>
 
-    <section id="home-hero">    
+    <section id="home-hero">
         <section id="book-magic">
             <div class="book-content">
                 <div class="book-text">
-                    <h2>Experience the Magic of <br><strong>ABNKKBSNPLAko?!</strong> - A Filipino Classic Reimagined</h2>
-                    <p>ABNKKBSNPLAko?! is a beloved Filipino book that resonates with students and readers alike. Its humor
+                    <h2>Experience the Magic of <br><strong>ABNKKBSNPLAko?!</strong> - A Filipino Classic Reimagined
+                    </h2>
+                    <p>ABNKKBSNPLAko?! is a beloved Filipino book that resonates with students and readers alike. Its
+                        humor
                         and relatable themes have made it a cultural phenomenon in the Philippines.</p>
                     <div class="book-impact">
                         <div>
@@ -66,21 +72,22 @@
                         </div>
                         <div>
                             <h3>Enduring Popularity</h3>
-                            <p>Its timeless stories continue to inspire new generations of readers in the Philippines.</p>
+                            <p>Its timeless stories continue to inspire new generations of readers in the Philippines.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="book-image">
-                    <img src="assets/home/book cover.png" alt="">
+                    <img src="assets/home/bc.png" alt="">
                 </div>
             </div>
         </section>
-    
+
         <section class="" id="bob-ong-style">
             <div class="bob-ong-content">
                 <div class="bon-ong-image">
-                    <img src="assets/home/image 1.png" alt="">
-                    <img src="assets/home/image.png" alt="">
+                    <img src="assets/home/bc1.png" alt="">
+                    <img src="assets/home/bc2.png" alt="">
                 </div>
                 <div class="bob-ong-text">
                     <h2>Discover the brilliance of <br>Bob Ong's storytelling and writing style.</h2>
@@ -93,7 +100,7 @@
                 </div>
             </div>
         </section>
-    
+
         <section id="story-quiz">
             <div class="story-quiz-content">
                 <h2>Explore the Story Today!</h2>
@@ -104,31 +111,38 @@
                     <button class="btn-q">Quiz</button>
                 </div>
             </div>
-        </section> 
+        </section>
     </section>
 
     <footer class="page-footers">
         <p>© 2025 ABNKKBSNPLAko?! All rights reserved.</p>
-    </footer> 
+    </footer>
 
     <script>
         const images = [
-            "./assets/home/hom1.png",
-            "./assets/home/hom2.png",
-            "./assets/home/hom3.png"
+            "https://your-netlify-site.netlify.app/assets/home/hom1.webp?w=1920&fm=webp",
+            "https://your-netlify-site.netlify.app/assets/home/hom2.webp?w=1920&fm=webp",
+            "https://your-netlify-site.netlify.app/assets/home/hom3.webp?w=1920&fm=webp"
         ];
-    
+
+
         let currentIndex = 0;
         const heroSection = document.querySelector("#hero");
-    
+
+        const imageCache = images.map((src) => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+
         function changeBackground() {
             currentIndex = (currentIndex + 1) % images.length;
             heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
         }
-    
+
         setInterval(changeBackground, 5000);
     </script>
-    
+
 </body>
 
 </html>
