@@ -4,12 +4,17 @@ async function loadComments() {
         const comments = await response.json();
 
         const commentsContainer = document.getElementById('comments');
-        commentsContainer.innerHTML = ''; // Clear previous comments
+        commentsContainer.innerHTML = '';
+
+        if (comments.length === 0) {
+            commentsContainer.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+            return;
+        }
 
         comments.forEach(comment => {
             const commentElement = document.createElement('div');
             commentElement.classList.add('comment');
-            commentElement.innerHTML = `<p>${comment.text}</p>`; // Remove username
+            commentElement.innerHTML = `<p>${comment.text}</p>`;
             commentsContainer.appendChild(commentElement);
         });
     } catch (error) {
