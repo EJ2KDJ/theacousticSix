@@ -9,7 +9,7 @@ async function loadComments() {
         comments.forEach(comment => {
             const commentElement = document.createElement('div');
             commentElement.classList.add('comment');
-            commentElement.innerHTML = `<p><strong>${comment.username}:</strong> ${comment.message}</p>`;
+            commentElement.innerHTML = `<p>${comment.text}</p>`; // Remove username
             commentsContainer.appendChild(commentElement);
         });
     } catch (error) {
