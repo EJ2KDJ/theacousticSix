@@ -7,7 +7,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default async function handler(req, res) {
     if (req.method === 'GET') {
         const { data, error } = await supabase
-            .from('comment_section')
+            .from('comments')
             .select('*');
 
         if (error) return res.status(500).json({ error: error.message });
