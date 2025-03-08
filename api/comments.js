@@ -15,13 +15,19 @@ export default async function handler(req, res) {
     }
 
     if (req.method === 'POST') {
-        const { username, comment } = req.body;
+        const { text } = req.body;
 
-        const { data, error } = await supabase
-            .from('comment_section')
-            .insert([{ username, comment }]);
+        if (!text) {
+            return res.status(400).json({ error: "Comment text is required" });
+        }
 
-        if (error) return res.status(500).json({ error: error.message });
+        const { data, error } = await supabase.from('comments').insert([{ text }]);
+
+        if (error) {
+            console.error("Error inserting comment:", error);
+            return res.status(500).json({ error: error.message });
+        }
+
         return res.status(201).json(data);
     }
 
