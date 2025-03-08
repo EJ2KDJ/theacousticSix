@@ -6,7 +6,6 @@ const path = require('path');
 const app = express();
 const port = 4000;
 
-
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,7 +17,7 @@ const pool = new Pool({
 
 pool.query('SELECT NOW()', (err, res) => {
     if (err) {
-        console.error('Error connecting to the database:'. res.rows[0]);
+        console.error('Error connecting to the database:', res.rows[0]);
     } else {
         console.log('Database connection succesful:', res.rows[0]);
     }
@@ -47,7 +46,7 @@ app.post('/comments', async (req, res) => {
 
     try {
         const result = await pool.query(
-            'INSERT INTO COMMENTS (text) VALUES ($1) RETURNING *',
+            'INSERT INTO COMMENTS (text, created_at) VALUES ($1, NOW()) RETURNING *',
             [text]
         );
         res.status(201).json(result.rows[0]);
