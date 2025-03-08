@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const path = require('path');
-const e = require('express');
 const app = express();
 const port = 4000;
 
@@ -12,11 +12,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'comment_section',
-    password: 'postgres',
-    port: 5432,
+    connectionString: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
 pool.query('SELECT NOW()', (err, res) => {

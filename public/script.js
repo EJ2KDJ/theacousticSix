@@ -16,14 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsList.appendChild(commentDiv);
     }
 
+    const backendUrl = 'https://comment-backend-9z73.onrender.com';
+
     async function fetchComments() {
         try {
-            const response = await fetch('http://localhost:4000/comments');
+            const response = await fetch('${backendUrl}/comments');
 
             const comments = await response.json();
-            comments.forEach(comment)
+            comments.forEach(comment => addComment(comment.text));
         } catch (err) {
             console.error('Error fetching comments:', err);
+        }
+    }
+
+    async function postComment(text) {
+        try {
+            const response = await fetch('${backendUrl}/comments');
+        } catch (err) {
+            console.error('Error posting comment:', error);
         }
     }
 
