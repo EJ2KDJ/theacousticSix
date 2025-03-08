@@ -7,7 +7,7 @@ const app = express();
 const port = 4000;
 
 
-app.use(cors);
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -18,7 +18,7 @@ const pool = new Pool({
 
 pool.query('SELECT NOW()', (err, res) => {
     if (err) {
-        console.error('Error connecting to the databse:'. err);
+        console.error('Error connecting to the database:'. res.rows[0]);
     } else {
         console.log('Database connection succesful:', res.rows[0]);
     }
@@ -28,7 +28,10 @@ pool.query('SELECT NOW()', (err, res) => {
 // GET ALL comments
 app.get('/comments', async (req, res) => {
     try {
-
+        const result = await pool.query(
+            'SELECT *  FROM comments ORDER BY created_at DESC'
+        );
+        res.json(result.rows);
     } catch(err) {
         console.error('Error fetching comments:', err);
         res.status(500).json({error: 'Internal Server Error'});
@@ -56,5 +59,5 @@ app.post('/comments', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Server running at https://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });

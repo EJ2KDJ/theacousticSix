@@ -4,11 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const commentsList = document.querySelector('.comment-list');
     const loadMoreButton = document.getElementById('load-more');
 
-    let comments = []; 
-    let visibleComments = 5; 
-    let currentIndex = 0; 
-
-
+    const backendUrl = 'https://comment-backend-9z73.onrender.com';
+    
     function addComment(text) {
         const commentDiv = document.createElement('div');
         commentDiv.classList.add('comment');
@@ -16,12 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsList.appendChild(commentDiv);
     }
 
-    const backendUrl = 'https://comment-backend-9z73.onrender.com';
-
     async function fetchComments() {
         try {
             const response = await fetch(`${backendUrl}/comments`);
-
             const comments = await response.json();
             comments.forEach(comment => addComment(comment.text));
         } catch (err) {
@@ -31,32 +25,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function postComment(text) {
         try {
-            const response = await fetch(`${backendUrl}/comments`);
+            const response = await fetch(`${backendUrl}/comments`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ text });
+            });
+            const comment = await response.json();
+            addComment(comment.text);
         } catch (err) {
-            console.error('Error posting comment:', error);
+            console.error('Error posting comment:', err);
         }
     }
 
     function loadMoreComments() {
-        const nextComments = comments.slice(currentIndex, currentIndex + visibleComments);
-        nextComments.forEach(comment => addComment(comment));
-        currentIndex += visibleComments;
-
-
-        if (currentIndex >= comments.length) {
-            loadMoreButton.style.display = 'none';
-        }
+        fetchComments().then(() => {
+            if (currentIndex >= commentsList.children.length) {
+                loadMoreButton.style.display = 'none';
+            }
+        });
     }
 
-    commentForm.addEventListener('submit', function (event) {
+    commentForm.addEventListener('submit', async (event) => {
         event.preventDefault(); 
-
         const commentText = commentInput.value.trim();
         if (commentText) {
-            comments.push(commentText); 
-            addComment(commentText); 
+            await postComment(commentText)
             commentInput.value = ''; 
-
             if (loadMoreButton.style.display === 'none') {
                 loadMoreButton.style.display = 'block';
             }
@@ -65,5 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadMoreButton.addEventListener('click', loadMoreComments);
 
-    loadMoreComments();
+    fetchComments();
 });
