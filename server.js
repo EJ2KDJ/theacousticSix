@@ -31,6 +31,7 @@ app.get('/comments', async (req, res) => {
     }
 }); 
 
+
 app.post('/comments', async (req, res) => {
     const {text} = req.body;
 
