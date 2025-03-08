@@ -15,7 +15,11 @@ pool.connect()
     .then(() => console.log("Connected to PostgreSQL on Render"))
     .catch(err => console.error("Database connection failed:", err));
 
-app.use(cors());
+app.use(cors({
+    origin: "https://your-netlify-app.netlify.app", // Replace with your Netlify URL
+    methods: "GET,POST"
+}));
+
 app.use(express.json());
 
 // GET ALL comments
