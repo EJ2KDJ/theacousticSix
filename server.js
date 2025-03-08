@@ -6,23 +6,19 @@ const path = require('path');
 const app = express();
 const port = 4000;
 
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    ssl: {
+        rejectUnauthorized: false,
+    },
 });
 
-pool.query('SELECT NOW()', (err, res) => {
-    if (err) {
-        console.error('Error connecting to the database:', res.rows[0]);
-    } else {
-        console.log('Database connection succesful:', res.rows[0]);
-    }
-});
+pool.connect()
+    .then(() => console.log("Connected to PostgreSQL on Render"))
+    .catch(err => console.error("Database connection failed:", err));
 
+app.use(cors());
+app.use(express.json());
 
 // GET ALL comments
 app.get('/comments', async (req, res) => {
@@ -33,7 +29,7 @@ app.get('/comments', async (req, res) => {
         res.json(result.rows);
     } catch(err) {
         console.error('Error fetching comments:', err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).send("Server Error");
     }
 }); 
 
@@ -43,7 +39,6 @@ app.post('/comments', async (req, res) => {
     if(!text) {
         return res.status(400).json({error: 'Comment text is required'});
     }
-
     try {
         const result = await pool.query(
             'INSERT INTO COMMENTS (text, created_at) VALUES ($1, NOW()) RETURNING *',
@@ -52,11 +47,11 @@ app.post('/comments', async (req, res) => {
         res.status(201).json(result.rows[0]);
     } catch (err) {
         console.error('Error adding comments', err);
-        res.status(400).json({error: 'Internal server error'})
+        res.status(400).send("Server Error");
     }
 });
 
-
-app.listen(port, () => {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
