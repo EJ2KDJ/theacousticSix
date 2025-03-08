@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function fetchComments() {
         try {
-            const response = await fetch('${backendUrl}/comments');
+            const response = await fetch(`${backendUrl}/comments`);
 
             const comments = await response.json();
             comments.forEach(comment => addComment(comment.text));
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function postComment(text) {
         try {
-            const response = await fetch('${backendUrl}/comments');
+            const response = await fetch(`${backendUrl}/comments`);
         } catch (err) {
             console.error('Error posting comment:', error);
         }
