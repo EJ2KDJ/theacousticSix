@@ -546,6 +546,9 @@ body {
     gap: 20px;
 }
 
+.reading-content h2 {
+    margin-bottom: 30px;
+}
 .reading-content p{
     font-family: 'Poppins', sans-serif;
     flex: 1;
@@ -553,13 +556,13 @@ body {
 
 .elem-img {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: column;
+    
 }
 
 .reading-content img {
     flex: 1;
     max-width: 100%;
-    height: auto;
 }
 
 .reading-buttons {
@@ -568,6 +571,12 @@ body {
     align-items: center;
     margin-top: 20px;
     padding: 0 20px;
+}
+
+.end-to-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #prev, #next {
