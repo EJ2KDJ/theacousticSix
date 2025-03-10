@@ -544,9 +544,11 @@ body {
 }
 
 #prev, #next {
+    font-family: 'Poppins', sans-serif;
     padding: 10px 20px;
     color: white;
     border: none;
+    border-radius: 10px;
     background-color: #006500;
     cursor: pointer;
     transition: background 0.4s;
