@@ -1,15 +1,21 @@
 let allComments = [];
 let commentsPerPage = 5;
-let commentIndex = 0; // Renamed from currentIndex
+let commentIndex = 0; // Separate from navigation
 
 async function loadComments() {
     try {
         const response = await fetch('https://theacoustic-six.vercel.app/api/comments');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP Error! Status: ${response.status}`);
+        }
+
         allComments = await response.json();
+        console.log("Fetched Comments:", allComments); // Debugging
 
         const commentsContainer = document.getElementById('comments');
         commentsContainer.innerHTML = '';
-        commentIndex = 0; // Reset for comment pagination
+        commentIndex = 0;
 
         if (allComments.length === 0) {
             commentsContainer.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
@@ -20,6 +26,7 @@ async function loadComments() {
         document.getElementById('load-more').style.display = allComments.length > commentsPerPage ? 'block' : 'none';
     } catch (error) {
         console.error('Error loading comments:', error);
+        document.getElementById('comments').innerHTML = '<p>Error loading comments.</p>';
     }
 }
 
@@ -58,67 +65,23 @@ async function submitComment(event) {
             body: JSON.stringify({ text: commentText })
         });
 
+        const responseData = await response.json();
+        console.log("Submit Response:", responseData); // Debugging
+
         if (!response.ok) {
-            throw new Error("Failed to submit comment");
+            throw new Error(`Failed to submit comment: ${responseData.error}`);
         }
 
         commentInput.value = "";
         loadComments();
     } catch (error) {
         console.error("Error submitting comment:", error);
+        alert("Failed to submit comment. Check console for details.");
     }
 }
 
+// Attach event listeners when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".reading-section");
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
-
-    const sectionTitles = ["Elementary", "High School Life", "College Life", "Adulthood"];
-    let currentIndex = 0;
-
-    function updateButtons() {
-        prevBtn.style.display = currentIndex > 0 ? "inline-block" : "none";
-        nextBtn.style.display = currentIndex < sectionTitles.length - 1 ? "inline-block" : "none";
-
-        if (currentIndex > 0) {
-            prevBtn.textContent = sectionTitles[currentIndex - 1];
-        }
-        if (currentIndex < sectionTitles.length - 1) {
-            nextBtn.textContent = sectionTitles[currentIndex + 1];
-        }
-    }
-
-    function showSection(index) {
-        sections.forEach((section, i) => {
-            section.classList.toggle("active", i === index);
-        });
-        updateButtons();
-    }
-
-    function scrollToReadSection() {
-        const readSection = document.querySelector(".reading-container");
-        if (readSection) {
-            readSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    }
-
-    nextBtn.addEventListener("click", () => {
-        if (currentIndex < sections.length - 1) {
-            currentIndex++;
-            showSection(currentIndex);
-            scrollToReadSection();
-        }
-    });
-
-    prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            showSection(currentIndex);
-            scrollToReadSection();
-        }
-    });
-
     loadComments();
 
     const commentForm = document.getElementById("comment-form");
@@ -130,7 +93,4 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener("click", displayNextComments);
     }
-
-
-    showSection(currentIndex);
 });
