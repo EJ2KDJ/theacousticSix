@@ -83,13 +83,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function updateButtons() {
-        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
-        nextBtn.style.display = currentIndex === sectionTitles.length - 1 ? "none" : "block";
+        prevBtn.style.display = currentIndex > 0 ? "inline-block" : "none";
+        nextBtn.style.display = currentIndex < sectionTitles.length - 1 ? "inline-block" : "none";
 
         if (currentIndex > 0) {
             prevBtn.textContent = sectionTitles[currentIndex - 1];
         }
-        if (currentIndex < sectionTitles - 1) {
+        if (currentIndex < sectionTitles.length - 1) {
             nextBtn.textContent = sectionTitles[currentIndex + 1];
         }
     }
