@@ -4,7 +4,7 @@ let commentIndex = 0; // Separate from navigation
 
 async function loadComments() {
     try {
-        const response = await fetch('https://theacoustic-six.vercel.app/api/comments');
+        const response = await fetch('https://acousticsix.vercel.app/api/comments');
         
         if (!response.ok) {
             throw new Error(`HTTP Error! Status: ${response.status}`);
