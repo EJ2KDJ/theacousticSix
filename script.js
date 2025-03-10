@@ -14,7 +14,7 @@ async function loadComments() {
         comments.forEach(comment => {
             const commentElement = document.createElement('div');
             commentElement.classList.add('comment');
-            commentElement.innerHTML = `<p>${comment.text}</p>`;
+            commentElement.innerHTML = `<p><strong>Reader: </strong>${comment.text}</p>`;
             commentsContainer.appendChild(commentElement);
         });
     } catch (error) {
