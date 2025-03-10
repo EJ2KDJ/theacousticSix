@@ -546,6 +546,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .reading-content h2 {
@@ -562,7 +563,7 @@ body {
 }
 
 .reading-content img {
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
     object-fit: contain;
 }
