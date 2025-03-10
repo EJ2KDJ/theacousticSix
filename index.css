@@ -571,14 +571,14 @@ body {
 
 .comment-list .comment {
     background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 14px;
+    border-radius: 2px;
     margin-bottom: 10px;
 }
 
 .comment-list .comment p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Load More Button */
