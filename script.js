@@ -74,4 +74,46 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComments();
     document.getElementById("comment-form").addEventListener("submit", submitComment);
     document.getElementById("load-more").addEventListener("click", displayNextComments);
+
+    const sections = document.querySelectorAll(".reading-section");
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    const sectionTitles = ["Elementary", "High School Life", "College Life", "Adulthood"];
+    let currentIndex = 0;
+
+    function updateButtons() {
+        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+        nextBtn.style.display = currentIndex === sectionTitles.length - 1 ? "none" : "block";
+
+        if (currentIndex > 0) {
+            prevBtn.textContent = sectionTitles[currentIndex - 1];
+        }
+        if (currentIndex < sectionTitles - 1) {
+            nextBtn.textContent = sectionTitles[currentIndex + 1];
+        }
+    }
+
+    function showSection(index) {
+        sections.forEach((section, i) => {
+            section.classList.toggle("active", i === index);
+        });
+        updateButtons();
+    }
+
+    nextBtn.addEventListener("click", () => {
+        if (currentIndex < sections.length - 1) {
+            currentIndex++;
+            showSection(currentIndex);
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showSection(currentIndex);
+        }
+    });
+
+    showSection(currentIndex);
 });

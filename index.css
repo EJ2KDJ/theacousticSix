@@ -525,10 +525,17 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+.reading-section.active {
+    display: block;
+    opacity: 1;
+}
+
 .reading-section h1{
     font-family: 'Permanent Marker Regular', sans-serif;
     color: white;
 }
+
+
 
 /* Comment section*/
 
