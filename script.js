@@ -1,6 +1,6 @@
 let allComments = []; 
 let commentsPerPage = 5; 
-let currentIndex = 0; 
+let commentIndex = 0; 
 
 async function loadComments() {
     try {
@@ -9,7 +9,7 @@ async function loadComments() {
 
         const commentsContainer = document.getElementById('comments');
         commentsContainer.innerHTML = '';
-        currentIndex = 0;
+        commentIndex = 0;
 
         if (allComments.length === 0) {
             commentsContainer.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
@@ -26,17 +26,17 @@ async function loadComments() {
 function displayNextComments() {
     const commentsContainer = document.getElementById('comments');
 
-    for (let i = currentIndex; i < currentIndex + commentsPerPage && i < allComments.length; i++) {
+    for (let i = commentIndex; i < commentIndex + commentsPerPage && i < allComments.length; i++) {
         const commentElement = document.createElement('div');
         commentElement.classList.add('comment');
         commentElement.innerHTML = `<p><strong>Anonymous:</strong> ${allComments[i].text}</p>`;
         commentsContainer.appendChild(commentElement);
     }
 
-    currentIndex += commentsPerPage;
+    commentIndex += commentsPerPage;
 
     
-    if (currentIndex >= allComments.length) {
+    if (commentIndex >= allComments.length) {
         document.getElementById('load-more').style.display = 'none';
     }
 }
@@ -72,8 +72,16 @@ async function submitComment(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadComments();
-    document.getElementById("comment-form").addEventListener("submit", submitComment);
-    document.getElementById("load-more").addEventListener("click", displayNextComments);
+    
+    const commentForm = document.getElementById("comment-form");
+    if (commentForm) {
+        commentForm.addEventListener("submit", submitComment);
+    }
+
+    const loadMoreBtn = document.getElementById("load-more");
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", displayNextComments);
+    }
 
     const sections = document.querySelectorAll(".reading-section");
     const prevBtn = document.getElementById('prev');
@@ -102,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function scrollToReadSection() {
-        const readSection = document.getElementById(".reading-container"); 
+        const readSection = document.querySelector(".reading-container"); 
         if (readSection) {
             readSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
