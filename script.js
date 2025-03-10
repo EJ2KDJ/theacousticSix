@@ -1,6 +1,6 @@
-let allComments = []; // Store all comments here
-let commentsPerPage = 5; // Number of comments to show at a time
-let currentIndex = 0; // Track how many comments are displayed
+let allComments = []; 
+let commentsPerPage = 5; 
+let currentIndex = 0; 
 
 async function loadComments() {
     try {
@@ -8,15 +8,15 @@ async function loadComments() {
         allComments = await response.json();
 
         const commentsContainer = document.getElementById('comments');
-        commentsContainer.innerHTML = ''; // Clear previous comments
-        currentIndex = 0; // Reset index
+        commentsContainer.innerHTML = '';
+        currentIndex = 0;
 
         if (allComments.length === 0) {
             commentsContainer.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
             return;
         }
 
-        displayNextComments(); // Show initial batch
+        displayNextComments();
         document.getElementById('load-more').style.display = allComments.length > commentsPerPage ? 'block' : 'none';
     } catch (error) {
         console.error('Error loading comments:', error);
@@ -35,15 +35,14 @@ function displayNextComments() {
 
     currentIndex += commentsPerPage;
 
-    // Hide "See More" button if all comments are loaded
+    
     if (currentIndex >= allComments.length) {
         document.getElementById('load-more').style.display = 'none';
     }
 }
 
-// Function to handle comment submission
 async function submitComment(event) {
-    event.preventDefault(); // Prevent form from refreshing page
+    event.preventDefault();
 
     const commentInput = document.getElementById("comment-input");
     const commentText = commentInput.value.trim();
@@ -57,23 +56,22 @@ async function submitComment(event) {
         const response = await fetch('https://theacoustic-six.vercel.app/api/comments', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text: commentText }) // Send comment text
+            body: JSON.stringify({ text: commentText })
         });
 
         if (!response.ok) {
             throw new Error("Failed to submit comment");
         }
 
-        commentInput.value = ""; // Clear input
-        loadComments(); // Refresh the comments after submitting
+        commentInput.value = "";
+        loadComments();
     } catch (error) {
         console.error("Error submitting comment:", error);
     }
 }
 
-// Attach event listeners
 document.addEventListener("DOMContentLoaded", () => {
-    loadComments(); // Load comments when page loads
+    loadComments();
     document.getElementById("comment-form").addEventListener("submit", submitComment);
     document.getElementById("load-more").addEventListener("click", displayNextComments);
 });

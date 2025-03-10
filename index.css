@@ -511,6 +511,14 @@ body {
     padding: 15px;
 }
 
+/* Read Section*/ 
+.reading-container {
+    background-color: #006500;
+}
+.reading-section h1{
+    font-family: 'Permanent Marker Regular', sans-serif;
+    color: white;
+}
 
 /* Comment section*/
 
