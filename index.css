@@ -551,6 +551,11 @@ body {
     flex: 1;
 }
 
+.elem-img {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .reading-content img {
     flex: 1;
     max-width: 100%;
