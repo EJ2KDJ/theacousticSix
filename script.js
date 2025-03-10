@@ -102,25 +102,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function scrollToReadSection() {
-        const readSection = document.getElementById("readSection"); 
+        const readSection = document.getElementById(".reading-container"); 
         if (readSection) {
             readSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }
 
     nextBtn.addEventListener("click", () => {
-        scrollToReadSection();
         if (currentIndex < sections.length - 1) {
             currentIndex++;
             showSection(currentIndex);
+            scrollToReadSection();
         }
     });
 
     prevBtn.addEventListener("click", () => {
-        scrollToReadSection();
         if (currentIndex > 0) {
             currentIndex--;
             showSection(currentIndex);
+            scrollToReadSection();
         }
     });
 
