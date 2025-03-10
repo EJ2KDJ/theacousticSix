@@ -1,6 +1,6 @@
-let allComments = []; 
-let commentsPerPage = 5; 
-let commentIndex = 0; 
+let allComments = [];
+let commentsPerPage = 5;
+let commentIndex = 0; // Renamed from currentIndex
 
 async function loadComments() {
     try {
@@ -9,7 +9,7 @@ async function loadComments() {
 
         const commentsContainer = document.getElementById('comments');
         commentsContainer.innerHTML = '';
-        commentIndex = 0;
+        commentIndex = 0; // Reset for comment pagination
 
         if (allComments.length === 0) {
             commentsContainer.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
@@ -35,7 +35,6 @@ function displayNextComments() {
 
     commentIndex += commentsPerPage;
 
-    
     if (commentIndex >= allComments.length) {
         document.getElementById('load-more').style.display = 'none';
     }
@@ -72,7 +71,7 @@ async function submitComment(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadComments();
-    
+
     const commentForm = document.getElementById("comment-form");
     if (commentForm) {
         commentForm.addEventListener("submit", submitComment);
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function scrollToReadSection() {
-        const readSection = document.querySelector(".reading-container"); 
+        const readSection = document.querySelector(".reading-container");
         if (readSection) {
             readSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
