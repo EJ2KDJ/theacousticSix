@@ -70,18 +70,6 @@ async function submitComment(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadComments();
-
-    const commentForm = document.getElementById("comment-form");
-    if (commentForm) {
-        commentForm.addEventListener("submit", submitComment);
-    }
-
-    const loadMoreBtn = document.getElementById("load-more");
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener("click", displayNextComments);
-    }
-
     const sections = document.querySelectorAll(".reading-section");
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
@@ -130,6 +118,19 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollToReadSection();
         }
     });
+
+    loadComments();
+
+    const commentForm = document.getElementById("comment-form");
+    if (commentForm) {
+        commentForm.addEventListener("submit", submitComment);
+    }
+
+    const loadMoreBtn = document.getElementById("load-more");
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", displayNextComments);
+    }
+
 
     showSection(currentIndex);
 });
