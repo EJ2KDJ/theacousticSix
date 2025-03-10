@@ -101,7 +101,15 @@ document.addEventListener("DOMContentLoaded", () => {
         updateButtons();
     }
 
+    function scrollToReadSection() {
+        const readSection = document.getElementById("readSection"); 
+        if (readSection) {
+            readSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+
     nextBtn.addEventListener("click", () => {
+        scrollToReadSection();
         if (currentIndex < sections.length - 1) {
             currentIndex++;
             showSection(currentIndex);
@@ -109,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     prevBtn.addEventListener("click", () => {
+        scrollToReadSection();
         if (currentIndex > 0) {
             currentIndex--;
             showSection(currentIndex);

@@ -535,7 +535,32 @@ body {
     color: white;
 }
 
+.reading-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
+#prevBtn, #nextBtn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    background-color: #006500;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+
+#prevBtn {
+    margin-left: 10px; 
+}
+
+#nextBtn {
+    margin-right: 10px; 
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #0056b3;
+}
 
 /* Comment section*/
 
