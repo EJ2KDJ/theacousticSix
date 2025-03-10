@@ -514,7 +514,17 @@ body {
 /* Read Section*/ 
 .reading-container {
     background-color: #006500;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
 }
+
+.reading-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .reading-section h1{
     font-family: 'Permanent Marker Regular', sans-serif;
     color: white;
