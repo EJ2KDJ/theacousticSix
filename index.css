@@ -526,7 +526,6 @@ body {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -543,7 +542,10 @@ body {
 
 .reading-content {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
 }
 
 .reading-content h2 {
@@ -557,12 +559,12 @@ body {
 .elem-img {
     display: flex;
     flex-wrap: column;
-    
 }
 
 .reading-content img {
-    flex: 1;
     max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .reading-buttons {
