@@ -521,6 +521,8 @@ body {
 }
 
 .reading-section {
+    width: 80%;
+    margin: 0 auto;
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -528,8 +530,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .reading-section.active {
@@ -541,8 +541,20 @@ body {
     font-family: 'Permanent Marker Regular', sans-serif;
 }
 
+.reading-content {
+    display: flex;
+    gap: 20px;
+}
+
 .reading-content p{
     font-family: 'Poppins', sans-serif;
+    flex: 1;
+}
+
+.reading-content img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
 }
 
 .reading-buttons {
