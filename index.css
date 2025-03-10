@@ -538,10 +538,12 @@ body {
 .reading-buttons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+    padding: 0 20px;
 }
 
-#prevBtn, #nextBtn {
+#prev, #next {
     padding: 10px 20px;
     color: white;
     border: none;
@@ -550,11 +552,11 @@ body {
     transition: background 0.4s;
 }
 
-#prevBtn {
+#prev {
     margin-left: 10px; 
 }
 
-#nextBtn {
+#next {
     margin-right: 10px; 
 }
 
