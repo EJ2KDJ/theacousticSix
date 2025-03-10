@@ -559,7 +559,10 @@ body {
 
 .elem-img {
     display: flex;
-    flex-wrap: column;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .reading-content img {
