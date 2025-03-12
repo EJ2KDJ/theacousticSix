@@ -16,27 +16,49 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex < sectionTitles.length - 1) {
             nextBtn.textContent = sectionTitles[currentIndex + 1];
         }
+
+        void prevBtn.offsetHeight;
+    }
+
+    function smoothScrollTo(targetPosition, duration) {
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+    
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1); // Ensures it stops at exactly the target
+            const ease = progress < 0.5 ? 2 * progress ** 2 : 1 - Math.pow(-2 * progress + 2, 2) / 2; // Ease-in-out effect
+    
+            window.scrollTo(0, startPosition + distance * ease);
+    
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+    
+        requestAnimationFrame(animation);
     }
 
     function showSection(index) {
         sections.forEach((section, i) => {
             section.classList.toggle("active", i === index);
         });
+    
+        const targetSection = sections[index];
+        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 97;
+    
+        smoothScrollTo(targetPosition, 500);
+    
         updateButtons();
     }
 
-    function scrollToReadSection() {
-        const readSection = document.querySelector(".reading-container");
-        if (readSection) {
-            readSection.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-    }
 
     nextBtn.addEventListener("click", () => {
         if (currentIndex < sections.length - 1) {
             currentIndex++;
             showSection(currentIndex);
-            scrollToReadSection();
         }
     });
 
@@ -44,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex > 0) {
             currentIndex--;
             showSection(currentIndex);
-            scrollToReadSection();
         }
     });
 
