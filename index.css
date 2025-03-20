@@ -309,76 +309,45 @@ body {
 
 /* EXPLORE PAGE */
 
-#explore-start {
-    font-family: "Poppins", sans-serif;
-    padding: 50px;
-    margin: 0 auto;   
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-
-#explore-start h1 {
-    font-weight: bold;
-    padding-bottom: 10px;
-    font-size: 36px;
-}
-
-#explore-start h3 {
-    font-weight: lighter;
-}
-
-#explore-start p {
-    font-size: 12px;
-}
-
 #explore {
     font-family: "Patrick Hand", cursive;
+}
+
+#explore h1 {
+    font-size: 50px;
+}
+
+#explore p {
+    font-size: 30px;
 }
 
 #e-1 h1 {
     text-align: left;
 }
 
-.e-c-l-b {
+.e-c-l-b, .e-c-r-b {
     padding: 15px;
     text-align: left;
 }
-.e-content-l {
+
+.e-content-l, .e-content-r {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     justify-content: center;
-    align-items: left;
-    text-align: left;
+    gap: 20px;
 }
 
-.e-content-l img{
-    width: 40%;
-}
-
-.e-content-l p {
-    width: 50%;
-
-}
-
-.e-c-r-b {
-    padding: 15px;
-    text-align: right;
-}
 .e-content-r {
-    width: 100%;
-    justify-content: center;
-    align-items: right;
     text-align: right;
+    align-items: right;
+}
+.e-content-l img, .e-content-r img{
+    width: 100%;
 }
 
-.e-content-r img{
-    width: 40%;
-}
-
-.e-content-r p {
-    width: 50%;
+.e-content-l p, .e-content-r p{
+    width: 100%;
 
 }
 
