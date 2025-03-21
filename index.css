@@ -832,7 +832,6 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        margin-left: auto; /* Moves the hamburger to the right */
     }
 
     .nav-container {
@@ -877,11 +876,6 @@ body {
         position: relative;
         top: -50px; /* Adjust this as needed */
     }
-
-
-
-
-
 
     .hero-content {
         position: relative;
