@@ -61,6 +61,10 @@ body {
     border-radius: 5px;
     font-size: 17px;
     text-decoration: none;
+    top: 60px; /* Adjust so it doesn't overlap */
+    right: 10px; /* Moves it closer to the right */
+    background: white;
+    width: 200px; /* Adjust width as needed */
 }
 
 
