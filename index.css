@@ -1,111 +1,962 @@
-<!DOCTYPE html>
-<html lang="en">
+html, body {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ABNKKBSNPLAko?! - Website</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-</head>
+body {
+    margin-top: 97px;
+}
 
-<body>
-    <header>
-        <nav class="navBar">
-            <div class="logo">Acoustic 6</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-routes">Home page</a></li>
-                <li><a href="about.html" class="nav-routes">About Us</a></li>
-                <li><a href="explore.html" class="nav-routes">Explore More</a></li>
-            </ul>
-            <a href="read.html" class="readbtn">Read Now</a>
-        </nav>
-    </header>
-    
-    <div class="intro-box">
-        <h2>Explore</h2>
-        <h1>Discover the Heart of Filipino School Life</h1>
-        <p>Dive into the rich themes of ABNKKBSNPLAko?! that resonate with every Filipino student. Our
-            interactive format brings these themes to life, making learning both fun and engaging.</p>
-    </div>
+/* Base Navbar */
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 2px 4px 7.5px rgba(0, 0, 0, 0.5);
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
 
-    <section id="explore">
-        <div id="e-1">
-            <div class="e-c-l-b">
-                <h1>1. Nostalgia for School Life</h1>
-                <div class="e-content-l">
-                <img src="" alt="">
-                <p>The book beautifully captures the universal experience of growing up in the Philippines, from elementary to adulthood. It brings back memories of school days filled with laughter, challenges, and unforgettable moments.</p>
-            </div>
-            </div>
-        </div>
 
-        <div id="e-2">
-            <div class="e-c-r-b">
-                <h1>2. Humor and Wit</h1>
-                <div class="e-content-r">
-                <img src="" alt="">
-                <p>Bob Ong's signature humor shines throughout the narrative, making readers laugh at the quirks and realities of Filipino student life while subtly reflecting on societal norms and expectations.</p>
-            </div>
-        </div>
+/* Desktop Navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        <div id="e-3">
-            <div id="e-c-rd-b">
-                <h1>3. Journey of Self-Discovery and Growth</h1>
-                <div id="e-3-content">
-                    <img src="" alt="">
-                    <p>The story showcases the protagonist's journey of self-awareness and personal growth as he navigates through different stages of life from the innocence of childhood to the complexities of adulthood.</p>
-                </div>
-            </div>
-        </div>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transform: translateX(-50%);
+}
 
-        <div id="e-4">
-            <div class="e-c-l-b">
-                <h1>4. Impact of Education and Teachers</h1>
-                <div class="e-content-l">
-                <img src="" alt="">
-                <p>The book highlights the significant role of education and teachers in shaping one's identity and future, portraying the classroom as a place not just for learning but also for life lessons.</p>
-            </div>
-        </div>
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        padding-right: 30px;
+        font-size: 24px;
+    }
 
-        <div id="e-5">
-            <div class="e-c-r-b">
-                <h1>5. Friendship and Social Dynamics</h1>
-                <div class="e-content-r">
-                <img src="" alt="">
-                <p>It explores the dynamics of friendships formed during school days, from childhood best friends to high school cliques, and how these relationships influence one’s perspective and decisions.</p>
-            </div>
-        </div>
 
-        <div id="e-6">
-            <div id="e-c-ld-b">
-                <h1>6. Reality vs. Expectations</h1>
-                <div id="e-6-content">
-                    <img src="" alt="">
-                    <p>The narrative contrasts the idealistic expectations set by society, parents, and oneself against the harsh realities of growing up, studying, graduating, and facing adulthood.</p>
-                </div>
-            </div>
-        </div>
+.readbtn {
+    background: black;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    text-decoration: none;
+}
 
-        <div id="e-7">
-            <div class="e-c-l-b">
-                <h1>7. Cultural Commentary on Philippine Society</h1>
-                <div class="e-content-l">
-                <img src="" alt="">
-                <p>Through humor and satire, Bob Ong provides a critical yet endearing view of Filipino culture, including societal norms, family expectations, and the Philippines educational system.</p>
-            </div>
-        </div>
 
-    </section>
-    
-    <footer class="explore-footer">
-        <p>© 2025 ABNKKBSNPLAko?! All rights reserved.</p>
-    </footer>    
+/* Hide Hamburger on Desktop */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 
-</body>
+.logo {
+    font-family: "Dancing Script", "cursive";
+    font-size: 40px;
+    font-weight: bolder;
+}
 
-</html>
+
+.btn:hover {
+    background-color: gray;
+}
+
+/* HOME - HERO */
+#home-hero {
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-1, .btn-2 {
+    padding: 12px;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.btn-2 {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.hero-btn:hover {
+    opacity: 0.8;
+}
+
+#book-magic, #bob-ong-style {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-content, .bob-ong-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.book-text {
+    flex: 1;
+}
+
+.book-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.book-text p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.book-impact {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.book-impact div {
+    flex: 1;    
+}
+
+.book-impact h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.book-image {
+    flex: 1;
+    text-align: center;
+}
+
+.book-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bon-ong-image {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+
+.bon-ong-image img {
+    width: 45%; 
+    height: auto;
+}
+
+.bon-ong-image img:first-child {
+    position: relative;
+    top: -15px;
+}
+
+.bon-ong-image img:last-child {
+    position: relative;
+    top: 15px; 
+}
+
+
+.bob-ong-image img {
+    max-width: 250px;
+    height: auto;
+}
+
+.bob-ong-text {
+    flex: 1;
+}
+
+.bob-ong-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bob-ong-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Story Quiz Section */
+#story-quiz {
+    text-align: left;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+#story-quiz h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#story-quiz p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
+
+.btn-r, .btn-q {
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-r {
+    background: black;
+    color: white;
+}
+
+.btn-q {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.quiz-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* EXPLORE PAGE */
+
+#explore-start {
+    font-family: "Poppins", sans-serif;
+    padding: 50px;
+    margin: 0 auto;   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#explore-start h1 {
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 36px;
+}
+
+#explore-start h3 {
+    font-weight: lighter;
+}
+
+#explore-start p {
+    font-size: 12px;
+}
+
+#explore {
+    font-family: "Patrick Hand", cursive;
+}
+
+#e-1 h1 {
+    text-align: left;
+}
+
+.e-c-l-b {
+    padding: 15px;
+    text-align: left;
+}
+.e-content-l {
+    width: 100%;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+}
+
+.e-content-l img{
+    width: 40%;
+}
+
+.e-content-l p {
+    width: 50%;
+
+}
+
+.e-c-r-b {
+    padding: 15px;
+    text-align: right;
+}
+.e-content-r {
+    width: 100%;
+    justify-content: center;
+    align-items: right;
+    text-align: right;
+}
+
+.e-content-r img{
+    width: 40%;
+}
+
+.e-content-r p {
+    width: 50%;
+
+}
+
+/* ABOUT */
+
+.about {
+    margin: 0 auto;
+    padding: 30px 20% 0 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 3rem;
+}
+
+.box {
+    justify-content: center;
+    align-items: center;
+    margin: 0 5% 0 5%;
+}
+
+.rows {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 40px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.person {
+    flex: 1;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+}
+.person h2 {
+    font-family: 'Permanent Marker Regular', sans-serif;
+    font-size: 32px;
+}
+.person h2, 
+.person p {
+    margin: 0;
+}
+
+.person p {
+    font-size: 20px;
+}
+
+
+.img-box {
+    position: relative;
+    width: 350px !important;
+    min-height: 350px !important;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 0.3rem black;
+    background-color: #467040;
+    object-fit: cover;
+}
+
+.p-img {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(100%);
+    transition: filter 0.25s ease-in-out;
+}
+
+.p-img.bobis {
+    top: -5%;
+}
+
+.p-img.large {
+    top: -15%; /* Makes all images slightly overflow */
+    height: 115%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.p-img:hover {
+    filter: grayscale(0%);
+}
+
+/* QUIZ */
+
+.intro-box {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.intro-box h3 {
+    font-weight: bold;
+}
+
+.intro-box h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+
+.intro-box h1 {
+    font-size: 42px;
+}
+
+.intro-box p {
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.qbox {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    justify-content: center;
+    align-items: start;
+}
+
+.qrow {
+    display: contents;
+}
+
+.qcharacter {
+    padding: 15px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.3rem;
+}
+
+.qcharacter h3 {
+    color: gray;
+}
+
+.qcharacter .qimg {
+    max-width: 100%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.quiz-btn {
+    text-decoration: none;
+    border: solid 2px black;
+    color: black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Read Section*/ 
+.reading-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #437247;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.6);
+}
+
+.reading-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    margin: 0 auto;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.reading-section.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative;
+}
+
+.reading-section h1{
+    font-family: 'Permanent Marker Regular', sans-serif;
+    margin: 60px;
+    font-size: 52px;
+}
+
+.reading-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.reading-section img {
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+#remarks-text {
+    margin-bottom: 150px;
+}
+.reading-content h2 {
+    margin-bottom: 30px;
+}
+.reading-content p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.reading-content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.elem-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resize-Img {
+    width: 70%;
+}
+
+.reading-buttons {
+    position: fixed;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.end-to-quiz {
+    border-top: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.end-to-quiz h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+.end-to-quiz p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#prev, #next {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 30px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    background-color: #006500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#prev {
+    margin-left: 10px; 
+}
+
+.reading-buttons #prev[style*="display: none"] + #next {
+    margin-left: auto;
+}
+
+#next {
+    margin-right: 10px; 
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Comment section*/
+
+/* Comment Box Section */
+.comment-box {
+    max-width: 1200px; 
+    margin: 80px auto; 
+    padding: 20px;
+}
+
+.comment-box h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+/* Comment Form */
+#comment-form {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 1px rgba(122, 121, 121, 0.5);
+}
+#comment-form textarea {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    height: 150px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+}
+
+#comment-input:focus {
+    outline: none;
+    border: none;
+}
+
+#comment-form button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#comment-form button:hover {
+    background-color: #004500;
+}
+
+#comment-container {
+    border-top: 1px solid gray;
+    margin-top: 50px;
+}
+
+/* Comment List */
+.comment-list {
+    margin-top: 20px;
+}
+
+.comment-list .comment {
+    padding: 14px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+}
+
+.comment-list .comment p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Load More Button */
+#load-more {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    padding: 0;
+    margin-top: 20px;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    text-align: right;
+    margin-left: auto;
+}
+
+#load-more:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Hide comments list when empty */
+.comments-list:empty {
+    display: none;
+}
+
+/* footers */
+.explore-footer {
+    background: linear-gradient(to top, #00000020, white);
+}
+
+.page-footers,
+.explore-footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Hide Navigation on Mobile */
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        background: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        align-items: center;
+        justify-content: center; /* Centers vertically */
+    }
+
+        .nav-container.show {
+            display: flex;
+
+        }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        justify-content: center; /* Centers vertically */
+
+    }
+
+        .nav-links li {
+            margin: 10px 0;
+        }
+
+    .readbtn {
+        text-align: center;
+        align-items: center;
+        display: block;
+        margin: 10px auto; /* Centers horizontally */
+    }
+
+    #hero {
+        position: relative;
+        top: -50px; /* Adjust this as needed */
+    }
+
+
+
+
+
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 400px;
+        text-align: left;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    #hero p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn {
+        justify-content: left;
+        gap: 15px; /* Adjust spacing between buttons */
+        margin-top: 10px; /* Space from the text */
+        margin-left: -20px;
+    }
+
+    .book-content {
+        flex-direction: column-reverse; /* Moves image above text */
+        text-align: left;
+        max-width: 400px;
+        font-size: small;
+    }
+
+    .book-image img {
+        max-width: 80%; /* Adjust image size for better fit */
+        margin-bottom: -50px;
+        margin-top: 50px;
+    }
+    .bob-ong-content {
+        flex-direction: column; /* Ensures image is above text */
+        text-align: left;
+        max-width: 410px;
+        font-size: small;
+    }
+
+    .bon-ong-image img {
+        max-width: 80%; /* Prevents image from being too large */
+        display: block;
+        margin: 0 auto; /* Centers the image */
+        margin-top: 50px;
+    }
+
+    .page-footers,
+    .explore-footer {
+        text-align: center;
+        padding: 40px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Story Quiz Section */
+    #story-quiz {
+        text-align: left;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #story-quiz h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        max-width: 400px;
+        margin-bottom: -5px;
+    }
+
+    #story-quiz p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
