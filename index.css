@@ -941,8 +941,6 @@ body {
         flex-direction: column;
         padding: 10px 0;
         text-align: center;
-        transform: translateX(0);
-
     }
 
         .nav-links li {
