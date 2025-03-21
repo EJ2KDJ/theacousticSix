@@ -940,7 +940,7 @@ body {
     .nav-links {
         flex-direction: column;
         padding: 10px 0;
-        text-align: center;
+        text-align: left;
         transform: translateX(0);
 
     }
