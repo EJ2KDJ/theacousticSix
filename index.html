@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="script.js"></script>
+
 
 <head>
     <meta charset="UTF-8">
@@ -20,12 +22,19 @@
     <header>
         <nav class="navBar">
             <div class="logo">Acoustic 6</div>
-            <ul class="nav-links">
-                <li><a href="home.html" class="nav-routes">Home page</a></li>
-                <li><a href="about.html" class="nav-routes">About Us</a></li>
-                <li><a href="explore.html" class="nav-routes">Explore More</a></li>
-            </ul>
-            <a href="read.html" class="readbtn">Read Now</a>
+
+            <!-- Hamburger Menu Button (Hidden on Desktop) -->
+            <button class="hamburger">&#9776;</button>
+
+            <!-- Navigation Links (Will toggle on mobile) -->
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="home.html" class="nav-routes">Home page</a></li>
+                    <li><a href="about.html" class="nav-routes">About Us</a></li>
+                    <li><a href="explore.html" class="nav-routes">Explore More</a></li>
+                </ul>
+                <a href="read.html" class="readbtn">Read Now</a>
+            </div>
         </nav>
     </header>
 
@@ -60,11 +69,14 @@
         <section id="book-magic">
             <div class="book-content">
                 <div class="book-text">
-                    <h2>Experience the Magic of <br><strong>ABNKKBSNPLAko?!</strong> - A Filipino Classic Reimagined
+                    <h2>
+                        Experience the Magic of <br><strong>ABNKKBSNPLAko?!</strong> - A Filipino Classic Reimagined
                     </h2>
-                    <p>ABNKKBSNPLAko?! is a beloved Filipino book that resonates with students and readers alike. Its
+                    <p>
+                        ABNKKBSNPLAko?! is a beloved Filipino book that resonates with students and readers alike. Its
                         humor
-                        and relatable themes have made it a cultural phenomenon in the Philippines.</p>
+                        and relatable themes have made it a cultural phenomenon in the Philippines.
+                    </p>
                     <div class="book-impact">
                         <div>
                             <h3>Cultural Impact</h3>
@@ -72,7 +84,8 @@
                         </div>
                         <div>
                             <h3>Enduring Popularity</h3>
-                            <p>Its timeless stories continue to inspire new generations of readers in the Philippines.
+                            <p>
+                                Its timeless stories continue to inspire new generations of readers in the Philippines.
                             </p>
                         </div>
                     </div>
@@ -91,12 +104,16 @@
                 </div>
                 <div class="bob-ong-text">
                     <h2>Discover the brilliance of <br>Bob Ong's storytelling and writing style.</h2>
-                    <p>Bob Ong is one of the most influential contemporary Filipino authors, know for his witty and
+                    <p>
+                        Bob Ong is one of the most influential contemporary Filipino authors, know for his witty and
                         insightful takes on Philippine culture, society, and everyday experiences. From humorous
                         recollections of student days to sharp reflections on life, his works have become must-reads for
-                        modern readers who wish to understand the Filipino psyche.</p>
-                    <p>He remains anonymous, his books ranging from heartwarming narratives to social commentaries, with
-                        themes that weave a lasting impact on Filipino literature.</p>
+                        modern readers who wish to understand the Filipino psyche.
+                    </p>
+                    <p>
+                        He remains anonymous, his books ranging from heartwarming narratives to social commentaries, with
+                        themes that weave a lasting impact on Filipino literature.
+                    </p>
                 </div>
             </div>
         </section>
@@ -118,8 +135,7 @@
         <p>© 2025 ABNKKBSNPLAko?! All rights reserved.</p>
     </footer>
 
-    <script>
-        const images = [
+    <script>const images = [
             "assets/home/hom1.webp",
             "assets/home/hom2.webp",
             "assets/home/hom3.webp"
@@ -140,8 +156,7 @@
         }
 
         setTimeout(changeBackground, 100);
-        setInterval(changeBackground, 5000);
-    </script>
+        setInterval(changeBackground, 5000);</script>
 
 </body>
 
