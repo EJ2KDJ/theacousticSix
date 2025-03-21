@@ -905,7 +905,7 @@ body {
     .book-content {
         flex-direction: column-reverse; /* Moves image above text */
         text-align: left;
-        max-width: 400px;
+        max-width: 310px;
         font-size: small;
     }
 
@@ -917,7 +917,7 @@ body {
     .bob-ong-content {
         flex-direction: column; /* Ensures image is above text */
         text-align: left;
-        max-width: 410px;
+        max-width: 310px;
         font-size: small;
     }
 
@@ -941,7 +941,6 @@ body {
         text-align: left;
         padding: 20px;
         margin-top: 10px;
-        max-width: 410px;
     }
 
     #story-quiz h2 {
