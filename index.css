@@ -331,7 +331,6 @@ body {
 }
 
 /* EXPLORE PAGE */
-
 #explore h1 {
     font-weight: bold;
     padding-bottom: 10px;
@@ -477,8 +476,8 @@ body {
 #last-set p {
     margin-right: 20%;
 }
-/* ABOUT */
 
+/* ABOUT */
 .about {
     margin: 0 auto;
     padding: 30px 20% 0 20%;
@@ -559,7 +558,7 @@ body {
 }
 
 .p-img.large {
-    top: -15%; /* Makes all images slightly overflow */
+    top: -15%;
     height: 115%;
     transform: translateX(-50%);
     z-index: 2;
@@ -787,8 +786,6 @@ body {
 }
 
 /* Comment section*/
-
-/* Comment Box Section */
 .comment-box {
     max-width: 1200px; 
     margin: 80px auto; 
@@ -1067,9 +1064,9 @@ body {
 
     }
 
-        .person:nth-child(3) {
-            margin-bottom: -100px; /* Adjust as needed */
-        }
+    .person:nth-child(3) {
+        margin-bottom: -100px; /* Adjust as needed */
+    }
 
   
     .img-box {
@@ -1085,12 +1082,12 @@ body {
         margin-bottom: -20px;
     }
 
-        .intro-box h1 {
-            margin-top: -30px;
-            font-size: 1.5rem;
-        }
+    .intro-box h1 {
+        margin-top: -30px;
+        font-size: 1.5rem;
+    }
 
-        .intro-box p {
-            font-size: 1rem;
-        }
+    .intro-box p {
+        font-size: 1rem;
+    }
 }
