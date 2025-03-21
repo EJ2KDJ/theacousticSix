@@ -832,34 +832,44 @@ body {
 /* Hide Navigation on Mobile */
 /* Mobile Styles */
 @media (max-width: 768px) {
+    .navBar {
+        height: 97px;
+    }
+    
     .hamburger {
         display: block;
+        z-index: 3;
     }
 
     .nav-container {
-        display: none;
+        align-items: flex-start;
+        overflow: hidden;
+        left: 0;
+        top: 10%;
         flex-direction: column;
         position: absolute;
-        right: 0;
         background: white;
+        max-height: 0;
         width: 100%;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
+        padding: 0;
         align-items: center;
-        justify-content: center; /* Centers vertically */
+        justify-content: center; 
+        transition: max-height 0.3s ease-in-out, padding 1s ease-in-out; 
     }
 
         .nav-container.show {
-            display: flex;
-
+            max-height: 350px;
+            align-items: flex-start;
+            padding-left: 30px;
         }
 
     .nav-links {
         flex-direction: column;
-        gap: 5px;
-        text-align: center;
-        justify-content: center; /* Centers vertically */
+        padding: 10px 0;
+        text-align: left;
+        transform: translateX(0);
 
     }
 
@@ -868,10 +878,9 @@ body {
         }
 
     .readbtn {
-        text-align: center;
-        align-items: center;
-        display: block;
-        margin: 10px auto; /* Centers horizontally */
+        align-self: flex-start;
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 
     #hero {
