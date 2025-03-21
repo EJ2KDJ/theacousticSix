@@ -821,7 +821,7 @@ body {
 }
 
 .page-footers,
-.explore-footer {
+.explore-footer, .about-footers {
     text-align: center;
     padding: 40px;
     font-size: 22px;
@@ -938,6 +938,13 @@ body {
         font-family: Arial, sans-serif;
     }
 
+    .about-footers {
+        margin-top: 60px; /* Adjust the value as needed */
+        padding: 40px;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+    }
+
     /* Story Quiz Section */
     #story-quiz {
         text-align: left;
@@ -956,4 +963,53 @@ body {
         font-size: 1rem;
         margin-bottom: 20px;
     }
+
+    /*about*/
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust spacing between boxes */
+    }
+
+    .rows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px; /* Ensure even spacing */
+    }
+
+    .person {
+        width: 100%; /* Each person takes full width */
+        text-align: center; /* Center align text */
+        margin-bottom: 20px; /* Ensure even spacing */
+
+    }
+
+        .person:nth-child(3) {
+            margin-bottom: -100px; /* Adjust as needed */
+        }
+
+  
+    .img-box {
+        display: flex;
+        justify-content: center;
+    }
+    
+  
+    .intro-box {
+        max-width: 350px; /* Adjust to fit content nicely */
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: -70px;
+    }
+
+        .intro-box h1 {
+            margin-top: -30px;
+            font-size: 1.5rem;
+        }
+
+        .intro-box p {
+            font-size: 1rem;
+        }
 }
