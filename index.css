@@ -1190,7 +1190,7 @@ body {
         margin-bottom: 0 0;
     }
     
-    .responsive-image {
+    .elem-stickynotes-image {
         content: url("assets/read/elementary/stickynotes-mobile-elem.png");
         margin-top: -70px; /* Adjust as needed */
     }
