@@ -1141,4 +1141,12 @@ body {
     	object-fit: cover;
         content: url("assets/explore/explore-mobile-.svg"); /* Change to mobile image */
     }
+
+    /*read*/
+
+    .reading-section h1 {
+        font-family: "Permanent Marker", serif;
+        margin: 60px;
+        font-size: 30px;
+    }
 }
