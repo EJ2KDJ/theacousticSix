@@ -1194,6 +1194,7 @@ body {
         content: url("assets/read/elementary/stickynotes-mobile-elem.png");
         margin-top: -70px; /* Adjust as needed */
         z-index: 9999; /* Higher value to bring it above others */
+        position: absolute;
     }
 }
 
