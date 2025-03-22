@@ -30,7 +30,7 @@ body {
     align-items: center;
     background: white;
     padding: 15px 40px;
-    box-shadow: 0 2px 4px 7.5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px 7.5px rgba(0, 0, 0, 0.2);
     flex-wrap: nowrap;
     box-sizing: border-box;
 }
