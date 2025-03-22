@@ -1143,6 +1143,10 @@ body {
 
     /*read*/
 
+    .intro-box h2 {
+        font-size: 20px;
+    }
+
     .reading-content {
         display: flex;
         flex-direction: column;
