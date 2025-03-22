@@ -1128,4 +1128,9 @@ body {
     .intro-box p {
         font-size: 1rem;
     }
+    /*explore*/
+    .full-size-image {
+    	object-fit: cover;
+        content: url("assets/explore/explore-mobile.svg"); /* Change to mobile image */
+    }
 }
