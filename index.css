@@ -897,6 +897,28 @@ body {
     font-family: Arial, sans-serif;
 }
 
+#explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#explore-container {
+    margin: 0;
+    padding: 0;
+}
+
+
+.full-size-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra spacing */
+    margin-bottom: -100px;
+}
+
 
 /* Hide Navigation on Mobile */
 /* Mobile Styles */
