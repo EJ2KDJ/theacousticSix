@@ -1190,7 +1190,28 @@ body {
     }
     
     .elem-stickynotes-image {
-        content: url("assets/read/elementary/stickynotes-mobile-elem.png");
+        content: url("assets/read/elementary/stickynotes-mobile-elem.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .highschool-stickynotes-image {
+        content: url("assets/read/highschool/stickynotes-mobile-highschool.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .college-stickynotes-image {
+        content: url("assets/read/college/stickynotes-mobile-college.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .adulthood-stickynotes-image {
+        content: url("assets/read/adulthood/stickynotes-mobile-adulthood.svg");
         margin-top: -50px; /* Adjust as needed */
         z-index: 9999; /* Higher value to bring it above others */
         object-fit: contain; /* Ensures the full image is visible */
