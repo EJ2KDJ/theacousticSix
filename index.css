@@ -1080,7 +1080,6 @@ body {
         font-size: 1.8rem;
         font-weight: bold;
         max-width: 400px;
-        margin-bottom: -5px;
     }
 
     #story-quiz p {
@@ -1144,6 +1143,10 @@ body {
 
     /*read*/
 
+    .intro-box h2 {
+        font-size: 20px;
+    }
+
     .reading-content {
         display: flex;
         flex-direction: column;
@@ -1182,13 +1185,14 @@ body {
     .reading-section h1 {
         font-family: "Permanent Marker", serif;
         margin: 60px;
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .reading-section h2 {
-        font-size: 18px;
+        font-size: 14px;
         margin-bottom: 0 0;
     }
+<<<<<<< HEAD
 
     .qbox {
         grid-template-columns: 1fr;
@@ -1203,5 +1207,45 @@ body {
         width: 100%;
         text-align: left;
     }
+
+    .elem-stickynotes-image {
+        content: url("assets/read/elementary/stickynotes-mobile-elem.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .highschool-stickynotes-image {
+        content: url("assets/read/highschool/stickynotes-mobile-highschool.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .college-stickynotes-image {
+        content: url("assets/read/college/stickynotes-mobile-college.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .adulthood-stickynotes-image {
+        content: url("assets/read/adulthood/stickynotes-mobile-adulthood.svg");
+        margin-top: -50px; /* Adjust as needed */
+        z-index: 9999; /* Higher value to bring it above others */
+        object-fit: contain; /* Ensures the full image is visible */
+    }
+
+    .end-to-quiz p {
+        text-align: left;
+    }
+
+    .end-to-quiz {
+        margin-top: -10px;
+    }
+=======
+    
+    
+>>>>>>> 57b0a33b95b9549f87c14397de31d6a824d285be
 }
 
