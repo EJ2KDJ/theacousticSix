@@ -1183,6 +1183,7 @@ body {
         font-family: "Permanent Marker", serif;
         margin: 60px;
         font-size: 24px;
+        margin-bottom: -30px;
     }
 
     .reading-section h2 {
