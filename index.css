@@ -1216,5 +1216,9 @@ body {
         z-index: 9999; /* Higher value to bring it above others */
         object-fit: contain; /* Ensures the full image is visible */
     }
+
+    .end-to-quiz p {
+        text-align: left;
+    }
 }
 
