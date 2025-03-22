@@ -1148,6 +1148,11 @@ body {
         font-family: "Permanent Marker", serif;
         margin: 60px;
         font-size: 30px;
-        margin-bottom: -20px;
+    }
+
+    .reading-content h2 {
+    margin-bottom: 30px;
+    font-family: "Peralta", cursive;
+    font-size: 30px;
     }
 }
