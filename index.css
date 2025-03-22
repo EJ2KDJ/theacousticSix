@@ -1182,6 +1182,7 @@ body {
         font-family: "Permanent Marker", serif;
         margin: 60px;
         font-size: 24px;
+        white-space: nowrap; /* Prevents text from breaking into multiple lines */
     }
 
     .reading-section h2 {
