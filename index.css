@@ -904,20 +904,36 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
-#explore-container {
-    margin: 0;
-    padding: 0;
+.image-container {
+    position: relative;
+    width: 100%;
 }
-
 
 .full-size-image {
     width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes extra spacing */
-    margin-bottom: -100px;
+    height: auto;
+    display: block;
 }
+
+/* Fixed Button Above Image */
+#backToTop {
+    position: fixed;
+    bottom: calc(100vh - 90%); /* Adjusts position just above the image */
+    right: 20px; /* Keeps button on the right */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it's above the image */
+}
+
+#backToTop img {
+    width: 50px; /* Adjust button size */
+    height: auto;
+}
+
 
 
 /* Hide Navigation on Mobile */
