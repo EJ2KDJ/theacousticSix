@@ -1189,5 +1189,19 @@ body {
         font-size: 18px;
         margin-bottom: 0 0;
     }
+
+    .qbox {
+        grid-template-columns: 1fr;
+    }
+
+    .qrow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .qcharacter {
+        width: 100%;
+        text-align: left;
+    }
 }
 
