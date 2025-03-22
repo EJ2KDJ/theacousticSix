@@ -1080,7 +1080,6 @@ body {
         font-size: 1.8rem;
         font-weight: bold;
         max-width: 400px;
-        margin-bottom: -5px;
     }
 
     #story-quiz p {
@@ -1183,7 +1182,6 @@ body {
         font-family: "Permanent Marker", serif;
         margin: 60px;
         font-size: 24px;
-        margin-bottom: -5px;
     }
 
     .reading-section h2 {
