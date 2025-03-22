@@ -1192,7 +1192,6 @@ body {
         font-size: 14px;
         margin-bottom: 0 0;
     }
-<<<<<<< HEAD
 
     .qbox {
         grid-template-columns: 1fr;
@@ -1243,9 +1242,5 @@ body {
     .end-to-quiz {
         margin-top: -10px;
     }
-=======
-    
-    
->>>>>>> 57b0a33b95b9549f87c14397de31d6a824d285be
 }
 
