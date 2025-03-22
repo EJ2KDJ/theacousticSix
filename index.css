@@ -1220,5 +1220,9 @@ body {
     .end-to-quiz p {
         text-align: left;
     }
+
+    .end-to-quiz {
+        margin-top: -10px;
+    }
 }
 
