@@ -1209,10 +1209,6 @@ body {
         text-align: left;
     }
 
-    .qcharacter:last-child {
-        margin-bottom: -20px !important;
-    }
-
     /*quiz*/
 
     .elem-stickynotes-image {
