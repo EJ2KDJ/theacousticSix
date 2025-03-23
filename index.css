@@ -1242,5 +1242,9 @@ body {
     .end-to-quiz {
         margin-top: -10px;
     }
+
+    .qcharacter:last-child {
+    margin-bottom: -40px; /* Adjust as needed */
+}
 }
 
