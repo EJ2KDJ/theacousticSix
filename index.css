@@ -189,11 +189,11 @@ body {
     color: black;
     border: 1px solid black;
     text-decoration: none;
+    transition: transform 0.2s ease-in-out; /* Smooth effect */
 }
 
 .btn-1:hover, .btn-2:hover {
     transform: scale(1.1); /* Slightly increase size on hover */
-    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
 
 .btn-2 {
