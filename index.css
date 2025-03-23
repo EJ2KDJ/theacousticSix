@@ -897,7 +897,7 @@ body {
     background: linear-gradient(to top, #00000020, white);
 }
 
-.page-footers, .quiz-footer
+.page-footers, 
 .explore-footer, .about-footers {
     text-align: center;
     padding: 40px;
@@ -1061,12 +1061,7 @@ body {
         font-size: 13px;
         font-family: Arial, sans-serif;
     }
-    .quiz-footer {
-        margin-top: -40px; /* Adjust the value as needed */
-        padding: 40px;
-        font-size: 13px;
-        font-family: Arial, sans-serif;
-    }
+    
     .about-footers {
         margin-top: 60px; /* Adjust the value as needed */
         padding: 40px;
