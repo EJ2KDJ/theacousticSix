@@ -72,12 +72,8 @@ body {
     border-radius: 5px;
     font-size: 17px;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
 
-.readbtn:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-}
 
 
 /* Hide Hamburger on Desktop */
@@ -189,12 +185,6 @@ body {
     color: black;
     border: 1px solid black;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out; /* Smooth effect */
-    display: inline-block; /* Allows transform to work */
-}
-
-.btn-1:hover, .btn-2:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
 .btn-2 {
