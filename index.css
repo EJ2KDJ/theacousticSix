@@ -1210,7 +1210,7 @@ body {
     }
 
     .qcharacter:last-child {
-        margin-bottom: -50px; /* Adjust as needed */
+        margin-bottom: -20px !important;
     }
 
     /*quiz*/
