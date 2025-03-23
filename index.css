@@ -1195,6 +1195,7 @@ body {
 
     .qbox {
         grid-template-columns: 1fr;
+        margin-bottom: -250px;
     }
 
     .qrow {
