@@ -1243,8 +1243,9 @@ body {
         margin-top: -10px;
     }
 
-    .qcharacter:last-child {
-    margin-bottom: -40px; /* Adjust as needed */
-}
+    .m-list:last-child {
+    margin-bottom: -50px; /* Adjust as needed */
+    }
+
 }
 
