@@ -55,6 +55,7 @@ body {
         color: black;
         padding-right: 30px;
         font-size: 24px;
+        transition: box-shadow 0.3s ease-in-out;
     }
 
 
