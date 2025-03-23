@@ -321,11 +321,6 @@ body {
     text-decoration: none;
 }
 
-.btn-r:hover, .btn-q:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
-    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
-}
-
 .btn-r {
     background: black;
     color: white;
