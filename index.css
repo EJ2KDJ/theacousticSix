@@ -72,11 +72,11 @@ body {
     border-radius: 5px;
     font-size: 17px;
     text-decoration: none;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
 
 .readbtn:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Apply shadow only to text */
+    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
 
@@ -178,11 +178,11 @@ body {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
 
 .hero-btn:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Apply shadow only to text */
+    transform: scale(1.1); /* Slightly increase size on hover */
 } 
 
 
@@ -328,8 +328,12 @@ body {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
     text-decoration: none;
+}
+
+.btn-r:hover, .btn-q:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
 }
 
 .btn-r {
