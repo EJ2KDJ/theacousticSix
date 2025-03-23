@@ -6,19 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const sectionTitles = ["Elementary", "High School Life", "College Life", "Adulthood"];
     let currentIndex = 0;
 
-   function updateButtons() {
-        prevBtn.style.display = currentIndex > 0 ? "inline-block" : "none";
-        nextBtn.style.display = currentIndex < sectionTitles.length - 1 ? "inline-block" : "none";
+    function updateButtons() {
+    prevBtn.style.display = currentIndex > 0 ? "inline-block" : "none";
+    nextBtn.style.display = currentIndex < sectionTitles.length - 1 ? "inline-block" : "none";
 
-        if (currentIndex > 0) {
-            prevBtn.textContent = sectionTitles[currentIndex - 1];
-        }
-        if (currentIndex < sectionTitles.length - 1) {
-            nextBtn.textContent = sectionTitles[currentIndex + 1];
-        }
+    prevBtn.textContent = currentIndex > 0 ? `< ${sectionTitles[currentIndex - 1]}` : "";
+    nextBtn.textContent = currentIndex < sectionTitles.length - 1 ? `${sectionTitles[currentIndex + 1]} >` : "";
 
-        void prevBtn.offsetHeight;
-    }
+    void prevBtn.offsetHeight; // Forces a reflow to smooth transition
+	}
 
 
     function smoothScrollTo(targetPosition, duration) {
