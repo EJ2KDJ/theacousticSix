@@ -190,6 +190,7 @@ body {
     border: 1px solid black;
     text-decoration: none;
     transition: transform 0.2s ease-in-out; /* Smooth effect */
+    display: inline-block; /* Allows transform to work */
 }
 
 .btn-1:hover, .btn-2:hover {
