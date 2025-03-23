@@ -72,6 +72,11 @@ body {
     border-radius: 5px;
     font-size: 17px;
     text-decoration: none;
+    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+}
+
+.readbtn:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
 
