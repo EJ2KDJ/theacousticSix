@@ -1193,6 +1193,8 @@ body {
         margin-bottom: 0 0;
     }
 
+    /*quiz*/
+
     .qbox {
         grid-template-columns: 1fr;
     }
@@ -1206,6 +1208,12 @@ body {
         width: 100%;
         text-align: left;
     }
+
+    .qcharacter:last-child {
+        margin-bottom: -50px; /* Adjust as needed */
+    }
+
+    /*quiz*/
 
     .elem-stickynotes-image {
         content: url("assets/read/elementary/stickynotes-mobile-elem.svg");
