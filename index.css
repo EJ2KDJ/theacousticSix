@@ -72,11 +72,11 @@ body {
     border-radius: 5px;
     font-size: 17px;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out; /* Smooth scaling effect */
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .readbtn:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Apply shadow only to text */
 }
 
 
@@ -178,8 +178,13 @@ body {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: box-shadow 0.3s ease-in-out;
 }
+
+.hero-btn:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Apply shadow only to text */
+} 
+
 
 .btn-1, .btn-2 {
     padding: 12px;
@@ -196,10 +201,6 @@ body {
     background: transparent;
     border: 1px solid white;
     color: white;
-}
-
-.hero-btn:hover {
-    opacity: 0.8;
 }
 
 #book-magic, #bob-ong-style {
