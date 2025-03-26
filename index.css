@@ -18,9 +18,14 @@ body {
     margin-top: 97px;
 }
 
+img {
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
 /* Base Navbar */
 .navBar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
