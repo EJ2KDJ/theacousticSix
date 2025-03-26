@@ -26,6 +26,7 @@ img {
 
 /* Base Navbar */
 .navBar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
